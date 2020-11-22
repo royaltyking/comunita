@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="_ionic-header">
+    <div class="content-logo">
+      <img src="assets/img/grey-logo.svg" alt="">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="_ion-content">
+  <div class="grid-x">
+    <div class="cell small-12 first-article">
+      <img src="assets/img/parque.jpg" alt="" class="img-first-article">
+      <div class="first-article-title t-bold tc-2 f16">Se aprueba el proyecto para la remodelación del parque infantil ubicado en la localidad</div>
+    </div>
+  </div>
+  <div *ngFor="let article of d; let i = index">
+    <div class="grid-x margin-top-1 content-article">
+      <div class="cell small-3 content-img-article">
+        <img src="assets/img/calabaza.jpg" alt="" class="img-article">
+      </div>
+      <div class="cell small-8 padding-top-1">
+        <div class="f12 t-bold">
+          {{article.title}}
+        </div>
+        <div class="date f10">
+          {{article.created_at | date:'medium'}}
+        </div>
+      </div>
+    </div>
+    <div class="grid-x" *ngIf="i != 2">
+      <div class="cell small-12">
+        <div class="hr"></div>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>

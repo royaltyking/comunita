@@ -1,0 +1,30 @@
+@import "__init__";
+
+
+.first-article {
+    position: relative;
+
+    .img-first-article {
+        width: 100%;
+        height: auto;
+        opacity: 0.5;
+    }
+
+    .first-article-title {
+        position: absolute;
+        bottom: 10px;
+        left: 5px;
+        z-index: 10;
+    }
+}
+
+.content-article {
+    .content-img-article {
+        text-align: center;
+        padding: 15px;
+        .img-article {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

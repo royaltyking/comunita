@@ -1,0 +1,23 @@
+<ion-content class="_ion-content">
+  <div *ngFor="let project of d; let i = index">
+    <div class="grid-x margin-top-1 content-project" [routerLink]="['/project-e', project.id]">
+      <div class="cell small-3 content-img-project">
+        <img src="assets/img/calabaza.jpg" alt="" class="img-project">
+      </div>
+      <div class="cell small-8 padding-top-1">
+        <div class="f12 t-bold">
+          {{project.name}}
+        </div>
+        <div class="date f10">
+          {{project.created_at | date:'medium'}}
+        </div>
+      </div>
+    </div>
+    <div class="grid-x" *ngIf="i != 2">
+      <div class="cell small-12">
+        <div class="hr"></div>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>

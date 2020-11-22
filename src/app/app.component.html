@@ -1,3 +1,32 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header>
+    <ion-toolbar class="_ionic-header">
+      <img src="assets/img/menu-logo.png" alt="" class="menu-icon" (click)="openFirst()">
+      <div class="content-logo">
+        <img src="assets/img/grey-logo.svg" alt="">
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-menu side="start" menuId="first" contentId="content" class="_menu">
+    <!--<ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Start Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>-->
+    <ion-content id="content">
+      <ion-list>
+        <ion-item>Artículos</ion-item>
+        <ion-item>Proyectos</ion-item>
+        <ion-item>Registrarse</ion-item>
+        <ion-item>Iniciar sesión</ion-item>
+        <ion-item>Votaciones abiertas</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+  <ion-content>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
+  
 </ion-app>
