@@ -15,4 +15,8 @@ export class ArticleService {
 
     return this.http.get('/api/articles');
   }
+
+  findById(id: number): Observable<any> {
+    return this.http.get('/api/articles/article/'+id);
+  }
 }

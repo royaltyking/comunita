@@ -15,4 +15,8 @@ export class ProjectsService {
 
     return this.http.get('/api/projects');
   }
+
+  findById(id: number): Observable<any> {
+    return this.http.get('/api/projects/project/'+id);
+  }
 }

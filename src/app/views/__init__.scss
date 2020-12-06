@@ -17,6 +17,15 @@ ion-menu {
     --ion-text-color: var(--ion-color-primary-contrast);
 }
 
+ion-datetime {
+    background: #FFFFFF !important;
+    --padding-top: 7px;
+    --padding-bottom: 7px;
+    margin-top: 2px !important;
+    margin-bottom: 8px !important;
+    --ion-text-color: var(--ion-color-primary-contrast);
+}
+
 ._ion-content {
     --background: #E5E5E5;
 }

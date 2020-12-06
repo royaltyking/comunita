@@ -7,26 +7,19 @@
       </div>
     </ion-toolbar>
   </ion-header>
-  <ion-menu side="start" menuId="first" contentId="content" class="_menu">
-    <!--<ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>-->
-    <ion-content id="content">
+  <ion-menu side="start" menuId="first" contentId="menu-content" class="_menu">
       <ion-list>
-        <ion-item>Artículos</ion-item>
-        <ion-item>Proyectos</ion-item>
-        <ion-item>Registrarse</ion-item>
-        <ion-item>Iniciar sesión</ion-item>
-        <ion-item>Votaciones abiertas</ion-item>
+        <ion-item [routerLink]="['/articles']">Artículos</ion-item>
+        <ion-item [routerLink]="['/projects']">Proyectos</ion-item>
+        <ion-item [routerLink]="['/sign-up']">Registrarse</ion-item>
+        <ion-item [routerLink]="['/login']">Iniciar sesión</ion-item>
+        <ion-item [routerLink]="['/voting-windows']">Votaciones abiertas</ion-item>
       </ion-list>
-    </ion-content>
   </ion-menu>
 
 
   <ion-content>
-    <ion-router-outlet></ion-router-outlet>
+    <ion-router-outlet id="menu-content"></ion-router-outlet>
   </ion-content>
   
 </ion-app>

@@ -5,7 +5,7 @@
       <div class="first-article-title t-bold tc-2 f16">Se aprueba el proyecto para la remodelación del parque infantil ubicado en la localidad</div>
     </div>
   </div>
-  <div *ngFor="let article of d; let i = index">
+  <div *ngFor="let article of d; let i = index" [routerLink]="['/articles-e', article.id]">
     <div class="grid-x margin-top-1 content-article">
       <div class="cell small-3 content-img-article">
         <img src="assets/img/calabaza.jpg" alt="" class="img-article">

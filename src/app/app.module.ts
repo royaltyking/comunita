@@ -23,6 +23,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ArticleService } from './models/articles.service';
 import { ProjectsService } from './models/projects.service';
+import { AuthService } from './models/auth.service';
+import { MasterDataService } from './models/masterdata.service';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,11 +38,12 @@ import { ProjectsService } from './models/projects.service';
     ProjectEComponent
   ],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [
     ArticleService,
     ProjectsService,
-
+    AuthService,
+    MasterDataService,
 
     StatusBar,
     SplashScreen,

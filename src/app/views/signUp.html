@@ -2,22 +2,64 @@
   <br>
   <div class="grid-x margin-top-1">
     <div class="cell small-10 small-offset-1">
-      <label for="">Correo electrónico</label>
-      <input type="text" id="email" class="_form-input" />
+      <label for="name" class="tc-bold">Nombre</label>
+      <input type="text" [(ngModel)]="f.first_name" id="first_name" name="first_name" class="_form-input" />
 
-      <label for="">Identificación</label>
-      <input type="text" id="identification" class="_form-input" />
+      <label for="" class="tc-bold">Apellidos</label>
+      <input type="text" name="last_name" id="last_name" class="_form-input" [(ngModel)]="f.last_name" />
 
-      <label for="">Nombre</label>
-      <input type="text" id="name" class="_form-input" />
+      <label for="" class="tc-bold">Género</label>
+      <select name="gender" id="gender" class="_form-input" [(ngModel)]="f.gender">
+        <option [value]="gender.id"  *ngFor="let gender of d.genders"> {{gender.name}} </option>
+      </select>
 
-      <label for="">Apellidos</label>
-      <input type="text" id="lastname" class="_form-input" />
+      <label for="" class="tc-bold">Fecha de nacimiento</label>
+      <ion-datetime [(ngModel)]="f.birth_date" name="birth_date" class="_form-input" displayFormat="MM DD YYYY" placeholder="Seleccionar" doneText="Aceptar" cancelText="Cancelar" monthNames="{{month_names}}" pickerFormat="DD MMMM YYYY" displayFormat="YYYY-MM-DD"></ion-datetime>
 
-      <label for="">Celular</label>
-      <input type="text" id="phone" class="_form-input" />
+      <label for="" class="tc-bold">Tipo de identificación</label>
+      <select name="" [(ngModel)]="f.document_type" name="document_type" id="document_type" class="_form-input">
+        <option [value]="document_type.id"  *ngFor="let document_type of d.documents_types"> {{document_type.name}} </option>
+      </select>
 
-      <button class="btn-action btn-save">Registrarse</button>
+      <label for="" class="tc-bold">Identificación</label>
+      <input type="text" [(ngModel)]="f.document_number" name="document_number" id="document_number" class="_form-input" />
+
+      <label for="" class="tc-bold">Celular</label>
+      <input type="text" [(ngModel)]="f.phone" id="phone" name="phone" class="_form-input" />
+
+      <label for="" class="tc-bold">Departamento</label>
+      <select name="" [(ngModel)]="f.state" id="state" name="state" class="_form-input" (change)="findCities()">
+        <option [value]="state.id"  *ngFor="let state of d.states"> {{state.name}} </option>
+      </select>
+
+      <label for="" class="tc-bold">Ciudad</label>
+      <select name="" [(ngModel)]="f.city" id="city" name="city" class="_form-input">
+        <option [value]="citie.id"  *ngFor="let citie of d.cities"> {{citie.name}} </option>
+      </select>
+
+      <label for="" class="tc-bold">Comuna</label>
+      <input type="text" [(ngModel)]="f.commune" name="commune" id="commune" class="_form-input" />
+
+      <label for="" class="tc-bold">Dirección</label>
+      <input type="text" [(ngModel)]="f.address" name="address" id="address" class="_form-input" />
+
+      <label for="" class="tc-bold">Correo electrónico</label>
+      <input type="text" [(ngModel)]="f.email" name="email" id="email" class="_form-input" />
+
+      <label for="" class="tc-bold">Contraseña</label>
+      <input type="password" [(ngModel)]="f.password" name="password" id="password" class="_form-input" />
+
+      <label for="" class="tc-bold">Confirmar Contraseña</label>
+      <input type="password" [(ngModel)]="f.confirmed_password" id="confirmed_password" name="confirmed_password" class="_form-input" />
+
+      <label><input type="checkbox" [(ngModel)]="f.terms_and_conditions" name="terms_and_conditions"> Si, acepto términos y condiciones</label>
+      <label><input type="checkbox" [(ngModel)]="f.security_politics" name="security_politics"> Si, acepto la política de privacidad</label>
+
     </div>
-  </div>  
+  </div>
+  <div class="grid-x">
+    <div class="cell small-10 small-offset-1">
+      <button class="btn-action btn-save" (click)="save()">Registrarse</button>
+    </div>
+  </div>
 </ion-content>

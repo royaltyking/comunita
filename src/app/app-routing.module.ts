@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import { ArticlesComponent } from './controllers/articles';
+import { ArticleEComponent } from './controllers/articleE'
 
 import { ProjectsComponent } from './controllers/projects';
 import { ProjectEComponent } from './controllers/projectE';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'articles',
     component: ArticlesComponent
+  },
+  {
+    path: 'articles-e/:id',
+    component: ArticleEComponent
   },
   {
     path: 'projects',

@@ -1,25 +1,10 @@
 @import "__init__";
 
 
-.img-project {
-    width: 100%;
-    height: auto;
-}
-
-.title {
-    font-weight: bold;
-    font-size: 14px;
-}
-
-.description {
-    font-size: 12px;
-    margin-bottom: 10px;
-}
-
-.date-content {
-    font-size: 14px;
-}
-
-.date-project {
-    font-weight: bold;
+.article {
+    .img-article {
+        width: 100%;
+        height: auto;
+        opacity: 0.5;
+    }
 }

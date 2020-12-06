@@ -1,21 +1,29 @@
 <ion-content class="_ion-content">
   <div class="grid-x">
-    <div class="cell small-12 first-article">
-      <img src="assets/img/calabaza.jpg" class="img-project" alt="">
+    <div class="cell small-12 project">
+      <img src="assets/img/parque.jpg" alt="" class="img-project">
     </div>
   </div>
-  <div class="grid-x grid-padding-x">
-    <div class="cell small-12 margin-top-1">
-      <span class="title">Remodelación parque infantil</span>
-      <div class="description margin-top-1">
-        Una de las propuestas más importantes para la comunidad, se plantea mejorar la infraestructura del parque infantil
-      </div>
-      <div class="date-content">
-        Fecha inicial: <span class="date-project">Nov 26 de 2020</span>
-      </div>
-      <div class="date-content">
-        Fecha final: <span class="date-project">Diciembre 31 de 2020</span>
-      </div>
+  <br>
+  <div class="grid-x grid-margin-y grid-padding-x">
+    <div class="cell small-12">
+      <span class="t-bold"> {{d.name}} </span>
+    </div>
+  </div>
+  <br>
+  <div class="grid-x grid-margin-y grid-padding-x">
+    <div class="cell small-12 f12" [innerHTML]="d.description">
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="grid-x grid-margin-y grid-padding-x">
+    <div class="cell small-12 f12">
+      <span class="t-bold">Inversión:</span> {{d.investment}}
+      <br>
+      <span class="t-bold">Fecha de inicio:</span> {{d.created_at | date:'medium'}}
+      <br>
+      <span class="t-bold">Duración:</span> {{d.duration}}
     </div>
   </div>
 </ion-content>
